@@ -1,10 +1,10 @@
 function postTextForComrades(num) {
   let text = "Товарищи, ";
   for (let j = 0; j < num; j++) {
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < textData.length; i++) {
       if (!(j == 0 && i == 0))
-        text = text + arr[i][getRandomInt(arr[i].length - 1)];
-      if (!(i + 1 >= arr.length)) {
+        text = text + textData[i][getRandomInt(textData[i].length - 1)];
+      if (!(i + 1 >= textData.length)) {
         text += " ";
       }
     }
@@ -13,12 +13,10 @@ function postTextForComrades(num) {
   }
 }
 
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
+const getRandomInt = max => Math.floor(Math.random() * max);
 // массив с элементами текста
 // добавить вариативность текста из отдельного файла
-const arr = [
+const textData = [
   [
     "С другой стороны,",
     "Равным образом",
