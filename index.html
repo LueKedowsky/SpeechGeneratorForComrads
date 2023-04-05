@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="javascript.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let num = 1;
+        function getValue() {
+            num = document.getElementById("number").value;
+            return num;
+        }
+    </script>
+    <div class="container">
+        <H1 class="container__header">Сгенерируйте ваш текст для речи на выступлении!</H1>
+        <div class="container__input-length">
+            <p class="input-length__title">Введите длину текста</p>
+            <input inputmode="numeric" pattern="[0-9]*" id="number" class="input-length__input" value="1">
+        </div>
+        <div class="container__generate-button">
+            <button type="submit" id="generate" class="generate-button__button" onclick="getValue(); postTextForComrades(num);">Нажмите для генерации
+                текста</button>
+        </div>
+        <div class="container__generated-text">
+            <div type="text" class="generated-text__text">Здесь будет готовый текст!</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
